@@ -3,7 +3,7 @@ import {CreateShopDto} from './dto/create-shop.dto';
 import {UpdateShopDto} from './dto/update-shop.dto';
 import {InjectModel} from "@nestjs/mongoose";
 import {ReturnModelType} from "@typegoose/typegoose";
-import {Shop} from "./shops.model";
+import {Shop} from "./shop.schema";
 
 @Injectable()
 export class ShopsService {

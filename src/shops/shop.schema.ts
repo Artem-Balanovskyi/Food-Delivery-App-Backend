@@ -1,5 +1,6 @@
+import { Schema, SchemaFactory } from "@nestjs/mongoose"
 import {prop} from '@typegoose/typegoose';
-
+@Schema()
 export class Shop {
     @prop({required: true})
     readonly shopName: string;
@@ -13,6 +14,7 @@ export class Shop {
     @prop({type: () => [MenuItem]})
     readonly menu: MenuItem[]
 }
+export const ShopSchema = SchemaFactory.createForClass(Shop);
 
 export class MenuItem {
     @prop({required: true})

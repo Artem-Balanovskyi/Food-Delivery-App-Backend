@@ -1,11 +1,15 @@
 import { Module } from '@nestjs/common';
 import { ShopsService } from './shops.service';
 import { ShopsController } from './shops.controller';
-import {TypegooseModule} from "nestjs-typegoose";
-import {Shop} from "./shops.model";
+import {MongooseModule} from "@nestjs/mongoose";
+import {ShopSchema} from "./shop.schema";
 
 @Module({
-  imports: [    TypegooseModule.forFeature([Shop])  ],
+  imports: [
+    MongooseModule.forFeature([
+      { name: 'Shop', schema: ShopSchema },
+    ]),
+  ],
   controllers: [ShopsController],
   providers: [ShopsService]
 })

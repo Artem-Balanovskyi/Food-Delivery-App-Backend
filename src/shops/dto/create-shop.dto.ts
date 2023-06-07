@@ -1,5 +1,5 @@
 import {IsBoolean, IsNotEmpty, IsString} from "class-validator";
-import {MenuItem} from "../shops.model";
+import {MenuItem} from "../shop.schema";
 
 export class CreateShopDto {
 
