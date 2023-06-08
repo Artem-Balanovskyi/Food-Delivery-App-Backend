@@ -5,7 +5,7 @@
 #### Food Delivery Application.
 
 ```bash
-It has been already deployd with VERCEL and you can just send requests to 
+It has been already deployed with VERCEL and you can just send requests to 
 the link below:
 ```
 https://food-delivery-app-backend-artem-balanovskyi.vercel.app/
@@ -19,9 +19,11 @@ You can send all basic CRUD requests to this endpoints.
 
 #### If you want to start the app locally then you need to rename 
 
-#### file "example.txt" in the root folder to ".env" and follow below instructions.
+#### file `"example.txt"` in the root folder to `".env"` and follow below instructions.
 
-#### Note: you can specify the port number on which the server should be started in this file.
+#### You should specify correct `CLIENT_APP_URL` whether you use localhost or deployed app.
+
+#### Note: you can specify the `PORT` number on which the server should be started in this file.
 
 ## Installation
 
