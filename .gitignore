@@ -1,5 +1,5 @@
 # compiled output
-#/dist
+/dist
 /node_modules
 
 # Logs
@@ -38,5 +38,5 @@ lerna-debug.log*
 .env
 
 #vercel
-#.vercel
-#vercel.json
+.vercel
+vercel.json
