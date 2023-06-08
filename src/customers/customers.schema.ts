@@ -1,25 +1,24 @@
-import {prop} from '@typegoose/typegoose';
 import {Order} from "../orders/orders.schema";
-import {Schema, SchemaFactory} from "@nestjs/mongoose";
+import {Prop, Schema, SchemaFactory} from "@nestjs/mongoose";
 
 @Schema()
 export class Customer {
-    @prop({required: true})
+    @Prop({required: true})
     readonly _id: number;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly name: string;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly email: string;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly phone: string;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly address: string;
 
-    @prop({type: () => [Order]})
+    @Prop({type: () => [Order]})
     readonly orders: Order[]
 }
 

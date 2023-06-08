@@ -2,13 +2,13 @@ import {Injectable, NotFoundException} from '@nestjs/common';
 import {CreateShopDto} from './dto/create-shop.dto';
 import {UpdateShopDto} from './dto/update-shop.dto';
 import {InjectModel} from "@nestjs/mongoose";
-import {ReturnModelType} from "@typegoose/typegoose";
 import {Shop} from "./shop.schema";
+import {Model} from "mongoose";
 
 @Injectable()
 export class ShopsService {
 
-    constructor(@InjectModel('Shop') private readonly shopsModel: ReturnModelType<typeof Shop>) {
+    constructor(@InjectModel('Shop') private readonly shopsModel: Model<Shop>) {
     }
 
     async create(createShopDto: CreateShopDto) {

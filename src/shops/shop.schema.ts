@@ -1,31 +1,32 @@
-import { Schema, SchemaFactory } from "@nestjs/mongoose"
-import {prop} from '@typegoose/typegoose';
+import {Prop, Schema, SchemaFactory} from "@nestjs/mongoose"
+
+export class MenuItem {
+    @Prop({required: true})
+    readonly itemName: string;
+
+    @Prop({required: true})
+    readonly price: number;
+
+    @Prop({required: true})
+    readonly image: string;
+
+    @Prop({required: true})
+    readonly quantity: number
+}
+
 @Schema()
 export class Shop {
-    @prop({required: true})
+    @Prop({required: true})
     readonly shopName: string;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly logo: string;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly isActive: boolean;
 
-    @prop({type: () => [MenuItem]})
+    @Prop({type: () => [MenuItem]})
     readonly menu: MenuItem[]
 }
 export const ShopSchema = SchemaFactory.createForClass(Shop);
 
-export class MenuItem {
-    @prop({required: true})
-    readonly itemName: string;
-
-    @prop({required: true})
-    readonly price: number;
-
-    @prop({required: true})
-    readonly image: string;
-
-    @prop({required: true})
-    readonly quantity: number
-}

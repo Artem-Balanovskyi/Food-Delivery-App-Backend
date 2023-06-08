@@ -2,13 +2,13 @@ import {Injectable, NotFoundException} from '@nestjs/common';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
 import {InjectModel} from "@nestjs/mongoose";
-import {ReturnModelType} from "@typegoose/typegoose";
 import {Customer} from "./customers.schema";
+import {Model} from "mongoose";
 
 @Injectable()
 export class CustomersService {
 
-  constructor(@InjectModel('Customer') private readonly customersModel: ReturnModelType<typeof Customer>) {
+  constructor(@InjectModel('Customer') private readonly customersModel: Model<Customer>) {
   }
   async create(createCustomerDto: CreateOrderDto) {
     const newCustomer = await new this.customersModel({...createCustomerDto});

@@ -1,26 +1,25 @@
-import {prop} from "@typegoose/typegoose";
-import {Schema, SchemaFactory} from "@nestjs/mongoose";
+import {Prop, Schema, SchemaFactory} from "@nestjs/mongoose";
 import {MenuItem} from "../shops/shop.schema";
 
 @Schema()
 export class Order {
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly _id: number;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly shopName: string;
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly customerName: string;
 
-    @prop({type: () => [MenuItem]})
+    @Prop({type: () => [MenuItem]})
     readonly orderItems: MenuItem[]
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly totalPrice: number
 
-    @prop({required: true})
+    @Prop({required: true})
     readonly date: string;
 }
 
