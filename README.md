@@ -16,32 +16,3 @@ You can send all basic CRUD requests to this endpoints.
 ## For example to get the data with all shops just send GET request to 
 ##  https://food-delivery-app-backend-five.vercel.app/shops
 ```
-
-#### If you want to start the app locally then you need to rename 
-
-#### file `"example.txt"` in the root folder to `".env"` and follow below instructions.
-
-#### You should specify correct `CLIENT_APP_URL` whether you use localhost or deployed app.
-
-#### Note: you can specify the `PORT` number on which the server should be started in this file.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-
