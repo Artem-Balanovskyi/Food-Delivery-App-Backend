@@ -8,7 +8,7 @@
 It has been already deployed with VERCEL and you can just send requests to 
 the link below:
 ```
-https://food-delivery-app-backend-five.vercel.app
+https://food-delivery-app-backend.vercel.app/
 ```bash
 There is 3 endpoints for your requests: orders, customers and shops.
 You can send all basic CRUD requests to this endpoints.
